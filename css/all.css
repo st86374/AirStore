@@ -466,3 +466,7 @@ body {
   display: none;
 }
 }
+
+.lb-dataContainer{
+	display:none!important
+}

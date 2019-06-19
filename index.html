@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/airstore_icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>AirStore</title>
+</head>
+
+<body>
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top box-shadow">
+            <h1>
+                <a class="navbar-brand text-secondary" href="index.html" style="font-size:0.8em;font-style:italic;"><span
+                        class="text-info">A</span>irStore<span class="text-info">.</span></a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tops
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">T-Shirt</a>
+                            <a class="dropdown-item" href="list.html">Shirts</a>
+                            <a class="dropdown-item" href="#">Hoodies</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bottoms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Pants</a>
+                            <a class="dropdown-item" href="#">Shorts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jacket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Others</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Sale</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-end dropdown" style="list-style: none">
+                    <div class="search-bar mx-2">
+                        <form class="searchbox d-flex justify-content-end " name="search_bar" id="search_bar"
+                            action="[search action]" method="post">
+                            <input type="submit" class="searchbox-submit bg-light" value="">
+                            <button type="button" class="btn text-secondary m-0 searchbox-icon "><i
+                                    class="fas fa-search icon-search"></i></button>
+                            <input type="search" placeholder="Press Enter to Search..." name="search_phrase"
+                                id="search_phrase" class="searchbox-input" onkeyup="buttonUp();" required>
+                        </form>
+                    </div>
+                    <button type="button" class="btn text-secondary mx-1 " data-toggle="modal"
+                        data-target="#loginModal"><i class="fas fa-user-alt"></i></button>
+                    <button type="button" class="btn text-secondary mx-1 btn-cart " data-toggle="dropdown"><i class="fas fa-shopping-bag"></i>
+                        <span class="badge badge-pill badge-danger">2</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px;">
+                        <div class="px-2 py-1">
+                            <h6 class="text-center font-weight-bold">Shopping Bag</h6>
+                            <table class="table table-sm">
+                                    <t-body>
+                                            <tr>
+                                                <td class="align-middle text-center">
+                                                    <a href="#removeModal" class="text-muted" data-toggle="modal"
+                                                        data-title="deleted">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                                <td>Shirt(Black)</td>
+                                                <td>2</td>
+                                                <td>$1,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center">
+                                                    <a href="#removeModal" class="text-muted" data-toggle="modal"
+                                                        data-title="deleted">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                                <td>Jeans(Skinny)</td>
+                                                <td>1</td>
+                                                <td>$1,200</td>
+                                            </tr>
+                                        </t-body>
+                            </table>
+                            <a href="CheckPage.html" class="btn btn-info btn-block">Check Out!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <div class="v-header container">
+            <div class="fullscreen-video-wrap">
+                <video muted src="img/sea.mov" autoplay="true" loop="true"></video>
+                <div class="header-overlay d-flex justify-content-center align-items-center">
+                    <div class="header-content text-center">
+                        <h2>New Arrivals</h2>
+                        <p>Wherever you're going, make it feel like paradise.</p>
+                        <button type="button" class="btn btn-lg btn-info">Check Out!</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="bg-white web">
+        <div class="container py-5">
+            <h3 class="text-secondary text-center my-5 font-italic"><span class="text-info">T</span>he Classic<span
+                    class="text-info">.</span></h3>
+            <div class="row" style="height:600px;overflow: hidden;">
+                <div alt="" class="col-5 bg-cover" style="background-image: url(img/shirts.jpg)">
+                    <div class="mask d-flex align-items-center justify-content-center">
+                        <div>
+                            <h3 class="text-light">Shirts</h3>
+                            <a href="list.html">
+                            <button type="button" class="btn btn-outline-light">MORE</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 d-flex flex-column h-100">
+                    <div class="row flex-column h-100" style="overflow:hidden;">
+                        <div class="h-100 bg-cover" style="background-image: url(img/Jacket.jpg)">
+                            <div class=" mask d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-light">Jacket</h3>
+                                    <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column h-100" style="overflow:hidden;">
+                        <div class="h-100 bg-cover" style="background-image: url(img/tshirt.jpg)">
+                            <div class="mask d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-light">T-Shirt</h3>
+                                    <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="height: 300px;;overflow:hidden">
+                <div class="col-8 bg-cover" style="background-image: url(img/pants.jpg)">
+                    <div class="mask d-flex align-items-center justify-content-center">
+                        <div>
+                            <h3 class="text-light">Pants</h3>
+                            <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-column h-100">
+                    <div class="row flex-column h-100" style="overflow:hidden;">
+                        <div class="h-100 bg-cover" style="background-image: url(img/other.jpg)">
+                            <div class="mask d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h3 class="text-light">Others</h3>
+                                    <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="bg-white mb">
+            <div class="container py-5">
+                <h3 class="text-secondary text-center my-5 font-italic"><span class="text-info">T</span>he Classic<span
+                        class="text-info">.</span></h3>
+                <div class="row" style="height: 600px">
+                    <div alt="" class="h-25 bg-cover" style="background-image: url(img/shirts.jpg)">
+                        <div class="mask d-flex align-items-center justify-content-center">
+                            <div>
+                                <h3 class="text-light">Shirts</h3>
+                                <button type="button" class="btn btn-outline-light">MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-25 bg-cover" style="background-image: url(img/Jacket.jpg)">
+                        <div class=" mask d-flex align-items-center justify-content-center">
+                            <div>
+                                <h3 class="text-light">Jacket</h3>
+                                <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-25 bg-cover" style="background-image: url(img/tshirt.jpg)">
+                        <div class="mask d-flex align-items-center justify-content-center">
+                            <div>
+                                <h3 class="text-light">T-Shirt</h3>
+                                <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-25 bg-cover" style="background-image: url(img/pants.jpg)">
+                        <div class="mask d-flex align-items-center justify-content-center">
+                            <div>
+                                <h3 class="text-light">Pants</h3>
+                                <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-25 bg-cover" style="background-image: url(img/other.jpg)">
+                        <div class="mask d-flex align-items-center justify-content-center">
+                            <div>
+                                <h3 class="text-light">Others</h3>
+                                <a href=""> <button type="button" class="btn btn-outline-light">MORE</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    <section class="bg-light">
+        <div class="container-fluid py-5 ">
+            <h3 class="text-secondary text-center mb-5 font-italic"><span class="text-info">S</span>tyle Wear<span
+                    class="text-info">.</span></h3>
+            <div class="gallery  slider">
+                <div class="slide-track text-center">
+                    <a class="slide" href="img/look1.jpg" data-lightbox="mygallery" data-title="look1"><img
+                            src="img/look1.jpg" alt=""></a>
+                    <a class="slide" href="img/look2.jpg" data-lightbox="mygallery" data-title="look2"><img
+                            src="img/look2.jpg" alt=""></a>
+                    <a class="slide" href="img/look3.jpg" data-lightbox="mygallery" data-title="look3"><img
+                            src="img/look3.jpg" alt=""></a>
+                    <a class="slide" href="img/look4.jpg" data-lightbox="mygallery" data-title="look4"><img
+                            src="img/look4.jpg" alt=""></a>
+                    <a class="slide" href="img/look5.jpg" data-lightbox="mygallery" data-title="look5"><img
+                            src="img/look5.jpg" alt=""></a>
+                    <a class="slide" href="img/look6.jpg" data-lightbox="mygallery" data-title="look6"><img
+                            src="img/look6.jpg" alt=""></a>
+                    <a class="slide" href="img/look1.jpg" data-lightbox="mygallery" data-title="look1"><img
+                            src="img/look1.jpg" alt=""></a>
+                    <a class="slide" href="img/look2.jpg" data-lightbox="mygallery" data-title="look2"><img
+                            src="img/look2.jpg" alt=""></a>
+                    <a class="slide" href="img/look3.jpg" data-lightbox="mygallery" data-title="look3"><img
+                            src="img/look3.jpg" alt=""></a>
+                    <a class="slide" href="img/look4.jpg" data-lightbox="mygallery" data-title="look4"><img
+                            src="img/look4.jpg" alt=""></a>
+                    <a class="slide" href="img/look5.jpg" data-lightbox="mygallery" data-title="look5"><img
+                            src="img/look5.jpg" alt=""></a>
+                    <a class="slide" href="img/look6.jpg" data-lightbox="mygallery" data-title="look6"><img
+                            src="img/look6.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-info">
+        <div class="container py-5 text-light">
+            <div class="row">
+                <div class="col-md-3 b-link text-center mb-5">
+                    <h2 class="font-italic">
+                        <a class="navbar-brand text-light" href="#" style="font-size:1.5em;">AirStore.</a>
+                    </h2>
+                    <div class="row">
+                        <a href="" class="col-3 text-light"><i class=" fab fa-facebook-square"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-instagram"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-youtube-square"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-twitter-square"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6 text-center">
+                            <h4>Help</h4>
+                            <ul class="pl-0">
+                                <li><a href="" class="text-light">Size Charts</a></li>
+                                <li><a href="" class="text-light">Order Help</a></li>
+                                <li><a href="" class="text-light">Online Returns</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h4>About Us</h4>
+                            <ul class="pl-0">
+                                <li><a href="" class="text-light">Story</a></li>
+                                <li><a href="" class="text-light">Careers</a></li>
+                                <li><a href="" class="text-light">Diversity</a></li>
+                                <li><a href="" class="text-light">Investors</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 align-items mt-5">
+                    <p class="m-1"><i class="fas fa-phone text-warning mr-2"></i>0800-000-000</p>
+                    <p class="m-1"><i class="fas fa-envelope text-warning mr-2"></i><a href=""
+                            class="text-light">airstore@abc.edu.tw</a></p>
+                    <p class="m-1"><i class="fas fa-map-marked-alt text-warning mr-2"></i>WILLY-BRAND-PLATZ 1 MUNICH, BY
+                        81829</p>
+                </div>
+            </div>
+    </footer>
+    <div class="copy bg-secondary">
+        <p class="text-light py-3 text-center m-0">©Copyright 2019. TangYuCheng</p>
+    </div>
+
+    <!--login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-toggle="modal" data-target="#registerModal"
+                        data-dismiss="modal">New friend</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--regiter Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>Join Member</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis expedita,
+                                    tempora, reprehenderit quaerat incidunt alias enim consequatur sunt deserunt eveniet
+                                    non veniam dicta necessitatibus quia ut! Perferendis, amet voluptatum!</p>
+                            </div>
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4"
+                                                placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4"
+                                                placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress">Address</label>
+                                        <input type="text" class="form-control" id="inputAddress"
+                                            placeholder="1234 Main St">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress2">Address 2</label>
+                                        <input type="text" class="form-control" id="inputAddress2"
+                                            placeholder="Apartment, studio, or floor">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCity">City</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState">State</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="inputZip">Zip</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="mr-auto" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">change
+                        login</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/airstore_icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>AirStore</title>
+</head>
+
+<body>
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top box-shadow">
+            <h1>
+                <a class="navbar-brand text-secondary" href="index.html" style="font-size:0.8em;font-style:italic"><span
+                        class="text-info">A</span>irStore<span class="text-info">.</span></a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tops
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">T-Shirt</a>
+                            <a class="dropdown-item" href="#">Shirts</a>
+                            <a class="dropdown-item" href="#">Hoodies</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bottoms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Pants</a>
+                            <a class="dropdown-item" href="#">Shorts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jacket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Others</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Sale</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-end dropdown" style="list-style: none">
+                    <div class="search-bar mx-2">
+                        <form class="searchbox d-flex justify-content-end " name="search_bar" id="search_bar"
+                            action="[search action]" method="post">
+                            <input type="submit" class="searchbox-submit bg-light" value="">
+                            <button type="button" class="btn text-secondary m-0 searchbox-icon "><i
+                                    class="fas fa-search icon-search"></i></button>
+                            <input type="search" placeholder="Press Enter to Search..." name="search_phrase"
+                                id="search_phrase" class="searchbox-input" onkeyup="buttonUp();" required>
+                        </form>
+                    </div>
+                    <button type="button" class="btn text-secondary mx-1 " data-toggle="modal"
+                        data-target="#loginModal"><i class="fas fa-user-alt"></i></button>
+                    <button type="button" class="btn text-secondary mx-1 btn-cart " data-toggle="dropdown"><i class="fas fa-shopping-bag"></i>
+                        <span class="badge badge-pill badge-danger">2</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px;">
+                        <div class="px-2 py-1">
+                            <h6 class="text-center font-weight-bold">Shopping Bag</h6>
+                            <table class="table table-sm">
+                                    <t-body>
+                                            <tr>
+                                                <td class="align-middle text-center">
+                                                    <a href="#removeModal" class="text-muted" data-toggle="modal"
+                                                        data-title="deleted">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                                <td>Shirt(Black)</td>
+                                                <td>2</td>
+                                                <td>$1,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-center">
+                                                    <a href="#removeModal" class="text-muted" data-toggle="modal"
+                                                        data-title="deleted">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                                <td>Jeans(Skinny)</td>
+                                                <td>1</td>
+                                                <td>$1,200</td>
+                                            </tr>
+                                        </t-body>
+                            </table>
+                            <a href="CheckPage.html" class="btn btn-info btn-block">Check Out!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="bg-light ">
+        <div class="jumbotron jumbotron-fluid  jumbotron-bg d-flex align-items-end justify-content-center">
+            <div class="text-dark light-mask text-center">
+                <h2 class="display-4">SHIRTS</h2>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                    parent.</p>
+            </div>
+        </div>
+    </section>
+    <section class="pb-5">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                    <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Tops</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Shirts</li>
+                            </ol>
+                          </nav>
+                <select class="form-control w-25 ">
+                    <option>Newest</option>
+                    <option>Match</option>
+                    <option>Price Hight to Low</option>
+                    <option>Price Low to Hight</option>
+                </select>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 text-secondary btn-cart">
+                        <div class="p-img my-1 pics">
+                                <a href="product.html"><img src="img/shirt1-2.jpg" alt=""></a>
+                                <a href="product.html"><img src="img/shirt1-1.jpg" alt=""></a>
+                            </div>
+                        <div class="wbg"><img src="img/shirt1-1.jpg" alt=""></div>
+                    <span class="badge badge-pill badge-danger">New</span>
+                    <div class="p-name my-1"><a href="product.html" class="text-secondary">PlaidShirt(White)</a></div>
+                    <div class="p-price my-1">NT$1,200</div>
+                    <div class="p-size my-1">
+                        <div class="btn-group btn-group-sm btn-block" role="group" aria-label="...">
+                            <button type="button" class="btn btn-outline-info">S</button>
+                            <button type="button" class="btn btn-outline-info">M</button>
+                            <button type="button" class="btn btn-outline-info">L</button>
+                            <button type="button" class="btn btn-outline-info">XL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-secondary">
+                        <div class="p-img my-1 pics">
+                                <a href="#"><img src="img/shirt2-2.jpg" alt=""></a>
+                                <a href="#"><img src="img/shirt2-1.jpg" alt=""></a>
+                            </div>
+                            <div class="wbg"><img src="img/shirt2-1.jpg" alt=""></div>
+                    <div class="p-name my-1"><a href="#" class="text-secondary">PlaidShirt(LightBlue)</a></div>
+                    <div class="p-price my-1">NT$1,200</div>
+                    <div class="p-size my-1">
+                        <div class="btn-group btn-group-sm btn-block" role="group" aria-label="...">
+                            <button type="button" class="btn btn-outline-info">S</button>
+                            <button type="button" class="btn btn-outline-info">M</button>
+                            <button type="button" class="btn btn-outline-info">L</button>
+                            <button type="button" class="btn btn-outline-info">XL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-secondary">
+                    <div class="p-img my-1 pics">
+                        <a href="#"><img src="img/shirt3-2.jpg" alt=""></a>
+                        <a href="#"><img src="img/shirt3-1.jpg" alt=""></a>
+                    </div>
+                    <div class="wbg"><img src="img/shirt3-1.jpg" alt=""></div>
+                    <div class="p-name my-1"><a href="#" class="text-secondary">PlaidShirt(Green)</a></div>
+                    <div class="p-price my-1">NT$1,200</div>
+                    <div class="p-size my-1">
+                        <div class="btn-group btn-group-sm btn-block" role="group" aria-label="...">
+                            <button type="button" class="btn btn-outline-info">S</button>
+                            <button type="button" class="btn btn-outline-info">M</button>
+                            <button type="button" class="btn btn-outline-info">L</button>
+                            <button type="button" class="btn btn-outline-info">XL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-secondary">
+                        <div class="p-img my-1 pics">
+                                <a href="#"><img src="img/shirt4-2.jpg" alt=""></a>
+                                <a href="#"><img src="img/shirt4-1.jpg" alt=""></a>
+                            </div>
+                    <div class="p-img my-1"><a href="#"><img src="img/shirt4-1.jpg" alt=""></a></div>
+                    <div class="p-name my-1"><a href="#" class="text-secondary">PlaidShirt(RedBlue)</a></div>
+                    <div class="p-price my-1">NT$1,200</div>
+                    <div class="p-size my-1">
+                        <button type="button" class="btn btn-sm btn-secondary btn-lg btn-block" disabled>Sold
+                            Out</button>
+                    </div>
+                </div>
+                <div class="col-md-3 text-secondary">
+                        <div class="p-img my-1 pics">
+                                <a href="#"><img src="img/shirt5-2.jpg" alt=""></a>
+                                <a href="#"><img src="img/shirt5-1.jpg" alt=""></a>
+                            </div>
+                            <div class="wbg"><img src="img/shirt5-1.jpg" alt=""></div>
+                    <div class="p-name my-1"><a href="#" class="text-secondary">ShortShirt(White)</a></div>
+                    <div class="p-price my-1 "><span class="fix-p"> NT$1,200</span><span
+                            class="font-weight-bolder text-danger ml-2">NT$800</span></div>
+                    <div class="p-size my-1">
+                        <div class="btn-group btn-group-sm btn-block">
+                            <button type="button" class="btn btn-outline-info">S</button>
+                            <button type="button" class="btn btn-outline-info disabled">M</button>
+                            <button type="button" class="btn btn-outline-info disabled">L</button>
+                            <button type="button" class="btn btn-outline-info">XL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-info">
+        <div class="container py-5 text-light">
+            <div class="row">
+                <div class="col-md-3 b-link text-center mb-5">
+                    <h2 class="font-italic">
+                        <a class="navbar-brand text-light" href="#" style="font-size:1.5em;">AirStore.</a>
+                    </h2>
+                    <div class="row">
+                        <a href="" class="col-3 text-light"><i class=" fab fa-facebook-square"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-instagram"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-youtube-square"></i></a>
+                        <a href="" class="col-3 text-light"><i class=" fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6 text-center">
+                            <h4>Help</h4>
+                            <ul class="pl-0">
+                                <li><a href="" class="text-light">Size Charts</a></li>
+                                <li><a href="" class="text-light">Order Help</a></li>
+                                <li><a href="" class="text-light">Online Returns</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h4>About Us</h4>
+                            <ul class="pl-0">
+                                <li><a href="" class="text-light">Story</a></li>
+                                <li><a href="" class="text-light">Careers</a></li>
+                                <li><a href="" class="text-light">Diversity</a></li>
+                                <li><a href="" class="text-light">Investors</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 align-items mt-5">
+                    <p class="m-1"><i class="fas fa-phone text-warning mr-2"></i>0800-000-000</p>
+                    <p class="m-1"><i class="fas fa-envelope text-warning mr-2"></i><a href=""
+                            class="text-light">airstore@abc.edu.tw</a></p>
+                    <p class="m-1"><i class="fas fa-map-marked-alt text-warning mr-2"></i>WILLY-BRAND-PLATZ 1 MUNICH, BY
+                        81829</p>
+                </div>
+            </div>
+    </footer>
+    <div class="copy bg-secondary">
+        <p class="text-light py-3 text-center m-0">©Copyright 2019. TangYuCheng</p>
+    </div>
+
+    <!--login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-toggle="modal" data-target="#registerModal"
+                        data-dismiss="modal">New friend</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--regiter Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>Join Member</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis expedita,
+                                    tempora, reprehenderit quaerat incidunt alias enim consequatur sunt deserunt eveniet
+                                    non veniam dicta necessitatibus quia ut! Perferendis, amet voluptatum!</p>
+                            </div>
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4"
+                                                placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4"
+                                                placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress">Address</label>
+                                        <input type="text" class="form-control" id="inputAddress"
+                                            placeholder="1234 Main St">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress2">Address 2</label>
+                                        <input type="text" class="form-control" id="inputAddress2"
+                                            placeholder="Apartment, studio, or floor">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCity">City</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState">State</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="inputZip">Zip</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="mr-auto" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">change
+                        login</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

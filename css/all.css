@@ -1,0 +1,469 @@
+ol, ul {
+    list-style: none;
+}
+body{
+  margin: 0;
+  padding: 0
+}
+.box-shadow{
+  box-shadow: 0 0 5px #000
+}
+
+/*search bar*/
+.searchbox{
+  position:relative;
+  min-width:42px;
+  width:0%;
+  height:42px;
+  float:right;
+  overflow:hidden;
+  
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.searchbox-input{
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 42px;
+  font-size: 18px;
+  padding:6px 10px;
+
+}
+.searchbox-icon, .searchbox-submit{
+  width: 42px;
+  height: 42px;
+  display: block;
+  position: absolute;
+  top: 0;
+  font-family: verdana;
+  font-size: 20px;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  line-height: 36px;
+  text-align: center;
+
+}
+.searchbox-icon {
+border:none;
+}
+
+.searchbox-open{
+  width: 250px;
+}
+/*badge*/
+.btn-cart{
+  background-color: transparent;
+  position: relative;
+}
+.btn-cart .badge{
+  position: absolute;
+  top: -1px;
+  right: -1px
+}
+.dropdown-menu-right{
+  right:0;
+  left: auto;
+}
+/*index video setting*/
+.v-header{
+    height:500px;
+    color:#fff;
+
+  }
+  .fullscreen-video-wrap{
+    position:absolute;
+    top:56px;
+    left:0;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+  }
+  .fullscreen-video-wrap video{
+    min-width:100%;
+  }
+  .header-overlay{
+    position: absolute;
+    height: 500px;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:1;
+    background-color: rgba(0,0,0,0.7);
+  }
+  .header-content{
+    z-index:2;
+  }
+  .header-content h2{
+    font-size:3rem;  
+  }
+  .header-content p{
+    font-size:1.5rem;
+  }
+/*index album setting*/
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-cover {
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.bg-cover:hover {
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  -moz-transform:scale(1.1); /* Firefox */
+  -ms-transform:scale(1.1); /* IE 9 */
+  -o-transform:scale(1.1); /* Opera */
+   transform:scale(1.1);
+   transition: transform .7s ease;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 164, 186, 0.6);
+  color: #ffffff;
+  opacity: 0;
+}
+.mask h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mask:hover{
+  opacity: 1;
+  transition:.7s ease;
+}
+
+/*index stylewear*/
+.gallery img{
+  width: 260px;
+  margin: 10px;
+  filter: grayscale(100%);
+  transition: .5s;
+}
+.gallery img:hover{
+  filter: grayscale(0);
+  transform: scale(1.05)
+}
+
+  .slider {
+    margin: auto;
+    overflow:hidden;
+    position: relative;
+
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, #f8f9fa 0%, #ffffff00 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+}
+
+@keyframes scroll {
+  0%{transform: translateX(0);}
+  100% {transform: translateX(calc(-280px * 6));}
+}
+.slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(280px * 12);
+}
+.slide-track:hover{
+  animation-play-state: paused;
+}
+.b-link h2{
+  font-size: 2rem
+}
+.b-link a{
+  font-size: 30px
+  
+}
+
+/*list top-bg*/
+.jumbotron-bg{
+  background-image: url(../img/T-shirt.jpg);
+  background-position: center top;
+  background-size: cover;
+  min-height: 400px;
+  filter:brightness(1);
+}
+.light-mask{
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding: 20px;
+}
+/*list list*/
+.wbg img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.p-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.fix-p{
+  text-decoration: line-through;
+}
+.pics{ position:relative;
+}
+.pics img{ 
+  position:absolute;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+ }
+ .pics img:last-child:hover{
+    opacity:0;
+ }
+.clearfix{
+  clear: both;
+}
+
+/*product*/
+.wrapper {
+  width: 60%;
+  display: block;
+}
+.cloud-zoom {
+  display: block;
+  width: 100%;
+}
+
+
+
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+	border: 4px solid #888;
+	margin:-4px;	/* Set this to minus the border thickness. */
+	background-color:#fff;	
+	cursor:move;		
+}
+
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute !important;
+	background-color:#000;
+	color:#fff;
+	padding:3px;
+	width:100%;
+	text-align:center;	
+	font-weight:bold;
+	font-size:10px;
+	top:0px;
+}
+
+/* This is the zoom window. */
+.cloud-zoom-big {
+	border:4px solid #ccc;
+	overflow:hidden;
+}
+
+/* This is the loading message. */
+.cloud-zoom-loading {
+	color:white;	
+	background:#222;
+	padding:3px;
+	border:1px solid #000;
+}
+
+
+
+
+/*
+.f-bg{
+background:#f8f9fa;
+background:linear-gradient(top,#f8f9fa,rgba(23, 162, 184)) center bottom no-repeat;
+background:-moz-linear-gradient(top,#f8f9fa,rgba(23, 162, 184)) center bottom no-repeat;
+background:-webkit-linear-gradient(top,#f8f9fa,rgba(23, 162, 184)) center bottom no-repeat;
+ 
+}*/
+
+
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.banner{overflow:hidden;position:relative;border:4px solid #f00;width:1000px;}
+.banner ul{margin:0;padding:0;list-style:none;}
+.banner .list li{float:left;}
+.banner .list img{display:block;width:100%;}
+
+.icos{position:absolute;z-index:1;left:50%;bottom:14px;}
+.icos li{text-indent:-9999px;background:#ccc;width:12px;height:12px;float:left;margin:0 5px;border-radius:100%;}
+.icos li.on{background:#f00;}
+
+body {
+  counter-reset: item;
+}
+.carousel-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-wrapper>.carousel-inner {
+  position: relative;
+  padding: 0 0 0 0;
+  left: 0;
+  margin: 0;
+  transition: all 1s;
+}
+.carousel-inner .item {
+  height: 100%;
+  float: left;
+  list-style: none;  
+  margin: 0 0 0 0;  
+}
+.carousel-inner .item:before {
+  counter-increment: item;
+}
+.carousel-left, .carousel-right {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;  
+}
+.carousel-left:before, .carousel-right:before {
+  content: "";
+  background: #666;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+.carousel-left:hover:before, .carousel-right:hover:before {
+  opacity: 0.8;
+}
+.carousel-left {
+  left: 0;
+}
+.carousel-right {
+  right: 0;
+}
+
+/*Demo styles*/
+
+.carousel-inner .item {
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+.carousel-left:before, .carousel-right:before {
+  background: url(https://i.imgur.com/Ej5hS07.png) no-repeat;
+  width: 50px;
+}
+.carousel-left:before {
+  left: 0;
+  background-position: -20% center;
+}
+.carousel-right:before {
+  right: 0;
+  background-position: -40px center;
+}
+.pic{
+  transform: scale(1,1);
+  transition: all 0.1s ease-out;
+}
+.pic:hover{
+  transform: scale(1.01,1.01)
+}
+.item img{
+  width: 300px;
+}
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #f90;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+
+.mb{
+  display: none;
+}
+
+@media (max-width: 767px) {
+.mb{
+  display: block
+}
+.web{
+  display: none;
+}
+}
